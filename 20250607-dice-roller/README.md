@@ -1,6 +1,9 @@
 # Simple Dice Roller (HMTL, CSS, JS)
 ## Interface
 ![image](https://github.com/user-attachments/assets/8b70a12a-c407-4013-9885-d2767bfbd30e)
+### Improved UI :grin:
+![image](https://github.com/user-attachments/assets/26c32c27-bd40-4192-9bd7-d664c441d507)
+
 ## Console Debugging Logs
 Coding this was my favorite part ahah <br/>
 ![image](https://github.com/user-attachments/assets/8d38fb61-152a-4216-bc76-0ad04db27c74)
