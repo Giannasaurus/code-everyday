@@ -1,0 +1,78 @@
+@import url('global.css');
+
+#codeEditorWrapper {
+  height: 100%;
+}
+
+#tabNavigation {
+  display: flex;
+  justify-content: flex-start;
+  align-items: end;
+  height: 50px;
+}
+
+#tabNavigation button.active {
+  background-color: #fff;
+}
+
+.tab-link {
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 14px 14px 0 0;
+  border-style: none;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.tab-link:nth-child(1) {
+  background-color: #f16a30;
+}
+
+.tab-link:nth-child(2) {
+  background-color: #2d53e5;
+}
+
+.tab-link:nth-child(3) {
+  background-color: #e5a42d;
+}
+
+.tab-link:nth-child(1).active {
+  color: #f16a30;
+  border: 3px solid #000;
+  border-bottom: none;
+}
+
+.tab-link:nth-child(2).active {
+  color: #2d53e5;
+  border: 3px solid #000;
+  border-bottom: none;
+}
+
+.tab-link:nth-child(3).active {
+  color: #e5a42d;
+  border: 3px solid #000;
+  border-bottom: none;
+}
+
+.code-editor {
+  border-width: 0px 3px 3px 3px;
+  border-style: solid;
+  border-color: #000;
+  outline: none;
+  display: none;
+  width: 100%;
+  height: 50%;
+}
+
+.active.code-editor {
+  display: block;
+}
+
+#code-output {
+  border: 3px solid #000;
+  width: 100%;
+  height: 50%;
+}
