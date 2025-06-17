@@ -1,6 +1,6 @@
 # Simple Random Quote Generator
 ## Gallery / Interface
-<img src="https://github.com/user-attachments/assets/38be7502-8755-4680-9ba3-99f81a5623d5" width=100)
+<img src="https://github.com/user-attachments/assets/38be7502-8755-4680-9ba3-99f81a5623d5" width="100")
 ![image](https://github.com/user-attachments/assets/3d8cb9b1-bfb5-40e5-8bd6-a5c6198adbc6)
 ![image](https://github.com/user-attachments/assets/a0c01d02-0315-4549-9822-dbdd686ce077)
 ![image](https://github.com/user-attachments/assets/36bcab6b-988e-4e8e-95d3-24bc4d1e3ef4)
