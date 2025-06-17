@@ -1,6 +1,9 @@
 # Simple Dice Roller (HMTL, CSS, JS)
 ## Gallery
-<img src="https://github.com/user-attachments/assets/8b70a12a-c407-4013-9885-d2767bfbd30e" width="500"/>
+<figure>
+  <img src="https://github.com/user-attachments/assets/8b70a12a-c407-4013-9885-d2767bfbd30e" width="500"/>
+  <figcaption>First UI</figcaption>
+</figure>
 <figure>
   <img src="https://github.com/user-attachments/assets/26c32c27-bd40-4192-9bd7-d664c441d507" width="500"/>
   <figcaption>Improved UI :grin:</figcaption>
