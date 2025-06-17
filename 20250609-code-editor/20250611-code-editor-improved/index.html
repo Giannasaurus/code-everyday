@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Theme Switcher</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="codeEditorWrapper">
+        <div id="tabNavigation">
+            <button type="button" class="tab-link active" data-tab-target="#htmlEditor">HTML</button>
+            <button type="button" class="tab-link" data-tab-target="#cssEditor">CSS</button>
+            <button type="button" class="tab-link" data-tab-target="#jsEditor">JS</button>
+        </div>
+        <textarea class="code-editor active" id="htmlEditor" name="html" placeholder="Write HTML code here..."></textarea>
+        <textarea class="code-editor" id="cssEditor" name="css" placeholder="Write CSS code here..."></textarea>
+        <textarea class="code-editor" id="jsEditor" name="js" placeholder="Write JS code here..."></textarea>
+        <iframe title="output" id="code-output"></iframe>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --tab-nav-height: 50px;
+  --global-border: 3px solid #000;
+}
+
+html, body {
+  font-family: "Helvetica", "Arial", sans-serif;
+  height: 100vh;
+  margin: 0;
+  overflow-y: hidden;
+}
+
+button,
+.tab-link {
+  background: none;
+  border: none;
+  appearance: none;
+}
+
+:focus {
+  outline: 2px solid #808080;
+  outline-offset: 1px;
+}
