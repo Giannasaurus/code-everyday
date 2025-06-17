@@ -1,7 +1,7 @@
 # Simple Dice Roller (HMTL, CSS, JS)
 ## Gallery
-<img src="https://github.com/user-attachments/assets/8b70a12a-c407-4013-9885-d2767bfbd30e" width="500"/>
 <img src="https://github.com/user-attachments/assets/26c32c27-bd40-4192-9bd7-d664c441d507" width="500"/>
+<img src="https://github.com/user-attachments/assets/8b70a12a-c407-4013-9885-d2767bfbd30e" width="500"/>
 
 ## Console Debugging Logs
 Coding this was my favorite part ahah <br/>
