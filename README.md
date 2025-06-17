@@ -5,3 +5,4 @@ June 9-10, 2025 / [HTML, CSS, JS Simple Code Editors](20250609-code-editor) <br/
 June 11, 2025 / [Improvement on code editors](20250609-code-editor/code-editor-improved) <br/>
 June 14, 2025 / [Random Quote Generator](20250614-random-quote-generator) <br/>
 June 15, 2025 / [Improvement on Random Quote Generator](20250614-random-quote-generator/20250614-random-quote-generator-improved) <br/>
+June 16-17, 2025 / [Improvement 2 on Random Quote Generator](20250614-random-quote-generator/20250614-random-quote-generator-improved-2) <br/>
