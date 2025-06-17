@@ -1,4 +1,4 @@
-# Stuff
+# Updates
 20250609 / Coded simple editors for HTML, CSS, and JavaScript <br/>
 20250611 / Refactored JS code, removed logs, improved styles 
 
