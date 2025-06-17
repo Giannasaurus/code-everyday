@@ -4,7 +4,7 @@
 <img src="https://github.com/user-attachments/assets/8b70a12a-c407-4013-9885-d2767bfbd30e" width="500"/>
 
 ## Updates
-20250607 / Coded dice roller
+20250607 / Coded dice roller <br/>
 20250608 / Improved code
 
 ---
