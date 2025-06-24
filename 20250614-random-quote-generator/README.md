@@ -7,7 +7,7 @@
 <img src="https://github.com/user-attachments/assets/dffefd92-d2e8-4638-9ec3-50adf74377d7" width="500"/>
 
 ---
-# References:
+## References:
 ### [For Improvement 2](20250614-random-quote-generator/20250614-random-quote-generator-improved-2)
 - [Change Image On Click + Image Toggle | JavaScript Project For Students | #SmartCode](https://www.youtube.com/watch?v=ydeQbbF9jbw) by #SmartCode <br/>
 
