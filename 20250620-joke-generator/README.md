@@ -1,7 +1,9 @@
 # Simple Joke Generator
 ## Gallery / Interface
-<img src="https://github.com/user-attachments/assets/6989d89a-7d4f-4fee-83b2-df3d2e5a4bd4" width="500">
+<img src="https://github.com/user-attachments/assets/6e69e0a7-d359-4cf2-89b2-3f33eb3b108d" width="500">
 <img src="https://github.com/user-attachments/assets/13d5bf86-734c-4720-b28d-4915d1a26d7f" width="500">
+<img src="https://github.com/user-attachments/assets/6989d89a-7d4f-4fee-83b2-df3d2e5a4bd4" width="500">
+
 
 ## What the code does
 ### Main Features
