@@ -25,8 +25,8 @@
 - On page load, if "Any" is preselected, custom checkboxes are disabled accordingly.
 
 #### Key Functions
-- Joke Fetching (jokeButton.addEventListener('click', ...)): Handles constructing the API request and updating the UI with the fetched joke.
-- Custom Category Controls (updateCustomAsterisk, removeOrAddClass): Handle enabling/disabling checkboxes and visual cues based on user selections.
+- Joke Fetching (`jokeButton.addEventListener('click', ...)`): Handles constructing the API request and updating the UI with the fetched joke.
+- Custom Category Controls (`updateCustomAsterisk, removeOrAddClass`): Handle enabling/disabling checkboxes and visual cues based on user selections.
 - Event Listeners: Ensure UI updates dynamically as the user changes their category selection.
 
 #### Error Handling
@@ -34,7 +34,7 @@
 
 ---
 ## References:
-- [JokeAPI](https://sv443.net/jokeapi/v2/)
+- [JokeAPI](https://sv443.net/jokeapi/v2/) by [Sven Fehler](https://github.com/Sv443)!
 
 ### Other helpful resources:
 - Fireship
