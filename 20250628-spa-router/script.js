@@ -22,7 +22,7 @@ document.addEventListener('click', e => {
     }
 })
 
-async function handleRoute(link) {
+function handleRoute(link) {
     const route = routes[link];
     console.log(route);
     if (route) {
