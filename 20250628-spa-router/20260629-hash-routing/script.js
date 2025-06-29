@@ -22,7 +22,7 @@ async function handleRoute() {
     const route = routes[location];
     const content = document.getElementById('content');
     if (!route) {
-        content.innerHTML = '404 not found';
+        content.innerHTML = '<p>404 not found</p>';
         return;
     }
     const txt = await fetch(route.template).then(res => res.text());
