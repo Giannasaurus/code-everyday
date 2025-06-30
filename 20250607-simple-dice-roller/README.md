@@ -8,5 +8,5 @@
 20250608 / Improved code
 
 ---
-References:
+# References:
 - [How to create Dice Roll GAME using HTML CSS and JavaScript](https://youtu.be/Wi-2jF2VC_4) by Learn Web Dev with Norbert
