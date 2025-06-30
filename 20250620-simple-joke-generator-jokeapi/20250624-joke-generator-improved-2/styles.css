@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --color-pink: #EA047E;
+    --color-orange: #ff8119;
+    --color-yellow: #FCE700;
+    --color-cyan: #00c8ff;
+
+    --main-margin: 50px;
+}
+
+body {
+    font: 700 20px 'Fredoka', sans-serif;
+    background-color: var(--color-orange);
+    height: calc(100vh - var(--main-margin / 2));
+    overflow: auto;
+}
+
+main {
+    background-color: var(--color-pink);
+    border: none;
+    border-radius: 30px;
+    height: 100%;
+    padding: 20px;
+    margin: var(--main-margin);
+}
+
+h1 {
+    color: var(--color-yellow);
+    display: inline-block;
+}
+
+button {
+    font: inherit;
+    font-size: 25px;
+    color: var(--color-yellow);
+    background-color: var(--color-cyan);
+    border: 8px solid var(--color-yellow);
+    border-radius: 50px;
+    display: inline-block;
+    padding: 15px 25px;
+    margin: 0 15px;
+}
+
+#jokeDisplay {
+    font-size: 30px;
+    margin: 15px 0;
+}
+
+form {
+    background-color: #ffffff50;
+    border-radius: 15px;
+    padding: 10px 20px;
+}
+
+fieldset {
+    border: none;
+    margin: 15px 0;
+}
+
+.custom-options {
+    margin-left: 15px;
+}
+
+label[for="custom"].red-custom {
+    color: red;
+}
+
+#custom.show-asterisk::after {
+    font: 700 20px 'Fredoka', sans-serif;
+    color: red;
+    content: "*";
+    margin-left: 100px;
+}
+
+@media only screen and (max-width: 700px) {
+    main {
+        margin: 25px;
+    }
+
+    button {
+        margin: 20px 0;
+    }
+}
