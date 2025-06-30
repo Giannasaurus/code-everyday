@@ -5,7 +5,7 @@
 
 ## Updates
 20250607 / Coded dice roller <br/>
-20250608 / Improved code
+20250608 / Improved code. [More info](20250607-simple-dice-roller/20250608-dice-roller-improved)
 
 ---
 # References:
