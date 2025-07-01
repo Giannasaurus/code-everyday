@@ -5,9 +5,9 @@
 <img src="https://github.com/user-attachments/assets/6989d89a-7d4f-4fee-83b2-df3d2e5a4bd4" width="500">
 
 ## Updates
-20250620 / Included 3 parameters: categories, blacklist flags, and type; visual cue for required field, disabled while not checked
-20250624 / Added media query style, grouped category options, helper function for showing/hiding styles
-20250625 / Added 2 params: language, format
+20250620 / Included 3 parameters: categories, blacklist flags, and type; visual cue for required field, disabled while not checked <br/>
+20250624 / Added media query style, grouped category options, helper function for showing/hiding styles <br/>
+20250625 / Added 2 params: language, format <br/>
 
 ## About the app
 ### Main Features
