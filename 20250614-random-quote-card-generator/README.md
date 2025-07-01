@@ -7,9 +7,9 @@
 <img src="https://github.com/user-attachments/assets/dffefd92-d2e8-4638-9ec3-50adf74377d7" width="500"/>
 
 ## Updates
-20250614 / Coded random quote card generator
-20250615 / Improved code; separated styles, removed unnecessary logs, separated quote and author, implemented 'card' style
-20250616 / Refactored code, implemented index to store used quote index ,added light theme switch, delete all, and delete previous card
+20250614 / Coded random quote card generator <br/>
+20250615 / Improved code; separated styles, removed unnecessary logs, separated quote and author, implemented 'card' style <br/>
+20250616 / Refactored code, implemented index to store used quote index ,added light theme switch, delete all, and delete previous card <br/>
 
 ---
 ## References
