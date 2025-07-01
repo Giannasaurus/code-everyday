@@ -63,11 +63,12 @@ $(document).ready(() => {
         if (e.key === 'Enter') {
             e.preventDefault();
             incr = Number(numVal.val()) || 0;
+            numVal.blur();
         }
     })
 
     $(document).click(e => {
-        if (e.target !== numVal && e.target !== changeVal)
+        if (e.target !== numVal[0] && e.target !== changeVal[0])
             incr = Number(numVal.val());
-    }, true)
+    })
 });
