@@ -1,16 +1,7 @@
 const routes = {
-    '/index.html': {
-        slug: '/index.html',
-        content: 'This is the home page',
-    },
-    '/about': {
-        slug: '/about.html',
-        content: 'This is the about page',
-    },
-    '/contact': {
-        slug: '/contact.html',
-        content: 'This is the contact page',
-    },
+    '/index.html': { content: 'This is the home page' },
+    '/about': { content: 'This is the about page' },
+    '/contact': { content: 'This is the contact page' },
 }
 
 document.addEventListener('click', e => {
