@@ -76,8 +76,7 @@ function getInfo(e) {
 
     const course = document.getElementById('course').value;
     const img = document.getElementById('img');
-    img.src = URL.createObjectURL(e.target.img.files[0]);
-    const imgURL = img.src;
+    const imgURL = URL.createObjectURL(e.target.img.files[0]);
 
     return { fullName, yr, course, imgURL };
 }
