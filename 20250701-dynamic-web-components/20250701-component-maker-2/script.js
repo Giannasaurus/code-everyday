@@ -42,7 +42,7 @@ function renderForm() {
 
                 <button type="submit">Create ID Card</button>
             </form>`;
-    document.head.append(`<link rel="stylesheet" href="styles.css">`);
+    document.head.append('<link rel="stylesheet" href="styles.css">');
 
     document.getElementById('idForm').addEventListener('submit', e => {
         e.preventDefault();
