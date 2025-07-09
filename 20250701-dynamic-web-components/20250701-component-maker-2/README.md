@@ -1,4 +1,6 @@
-# Problems & Solutions
+# Component Maker (College ID Card)
+
+## Problems & Solutions
 1. Problem: Trying to access the uploaded image file using document.getElementById('img').src = URL.createObjectURL(e.target.img.files[0]); in getInfo(). <br/>
 Solution: You should not set the src property of the file input element. Instead, just use `URL.createObjectURL(e.target.img.files[0])` to get the image URL and assign it to a variable. Example:
 ```
@@ -19,3 +21,9 @@ Solution: Remove `img.src = ...` and only use the generated URL for displaying t
 
 5. Problem: If no file is selected, e.target.img.files[0] will be undefined, causing errors. <br/>
 Solution: Add a check to ensure a file is selected before calling `URL.createObjectURL`.
+
+---
+## References
+
+### Other helpful resources
+- [How To Display Uploaded Image In Html Using Javascript ?](How To Display Uploaded Image In Html Using Javascript ?) by Webtrickshome
