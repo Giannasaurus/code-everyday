@@ -26,4 +26,4 @@ Solution: Add a check to ensure a file is selected before calling `URL.createObj
 ## References
 
 ### Other helpful resources
-- [How To Display Uploaded Image In Html Using Javascript ?](How To Display Uploaded Image In Html Using Javascript ?) by Webtrickshome
+- (How To Display Uploaded Image In Html Using Javascript ?)[How To Display Uploaded Image In Html Using Javascript ?] by Webtrickshome
