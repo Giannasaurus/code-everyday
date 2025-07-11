@@ -27,3 +27,6 @@ Dynamic Web Components
 > July 1, 2025 / [Simple Number Incrementor](20250701-dynamic-web-components/20250701-number-incrementor) <br/>
 > July 1, 2025 / [College ID Card Maker (trial)](20250701-dynamic-web-components/20250701-component-maker) <br/>
 > July 1, 2025 / [College ID Card Maker](20250701-dynamic-web-components/20250701-component-maker-2) <br/>
+
+Notes App 
+> July 11, 2025 / [Notes App](20250711-notes-app) <br/>
