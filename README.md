@@ -25,3 +25,4 @@ SPA Routing
 
 Dynamic Web Components
 > July 1, 2025 / [Simple Number Incrementor](20250701-dynamic-web-components/20250701-number-incrementor) <br/>
+> July 1, 2025 / [College ID Card Maker (trial)](20250701-dynamic-web-components/20250701-component-maker) <br/>
