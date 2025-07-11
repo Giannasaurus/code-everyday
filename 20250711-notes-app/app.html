@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Notes App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Quick Notes</h1>
+        <div>
+            <button class='add-note' type='button'>+ Add Note</button>
+            <button id='themeSwitch' type='button'>🌙</button>
+        </div>
+    </header>
+
+    <main>
+        <section id='notesContainer'>
+            <div id='filler'>
+                <h2>No notes yet</h2>
+                <p>Create your first note to get started!</p>
+                <button class='add-note' type='button'>+ Add Your First Note</button>
+            </div>
+        </section>
+        
+        <dialog id='noteEditor'>
+            <form id='form'>
+                <h2>Add New Note</h2>
+                    
+                <label for='title'>Title</label> <br>
+                <input type='text' id='title' placeholder='My new note'> <br>
+
+                <label for='content'>Content</label> <br>
+                <textarea type='text' id='content' placeholder='Starting writing here...' required></textarea>
+
+                <div>
+                    <button type='button' id='cancelNote'>Cancel</button>
+                    <button type='submit' id='saveNote'>Save Note</button>
+                </div>
+            </form>
+        </dialog>
+
+        <p id='noteSaved'>Note saved!</p>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
