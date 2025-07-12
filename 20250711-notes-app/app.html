@@ -25,18 +25,24 @@
                 <button class='add-note' type='button'>+ Add Your First Note</button>
             </div>
         </section>
-        
+
         <dialog id='noteEditor'>
             <form id='form'>
                 <h2>Add New Note</h2>
-                    
-                <label for='title'>Title</label> <br>
-                <input type='text' id='title' placeholder='My new note'> <br>
 
-                <label for='content'>Content</label> <br>
-                <textarea type='text' id='content' placeholder='Starting writing here...' required></textarea>
+                <div class='inputBoxes'>
+                    <fieldset class='inputTitle'>
+                        <label for='title'>Title</label>
+                        <input type='text' id='title' placeholder='My new note'>
+                    </fieldset>
 
-                <div>
+                    <fieldset class='inputContent'>
+                        <label for='content'>Content</label>
+                        <textarea type='text' id='content' placeholder='Starting writing here...' required></textarea>
+                    </fieldset>
+                </div>
+
+                <div class='cancelSave'>
                     <button type='button' id='cancelNote'>Cancel</button>
                     <button type='submit' id='saveNote'>Save Note</button>
                 </div>
