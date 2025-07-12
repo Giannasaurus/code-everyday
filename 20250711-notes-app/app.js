@@ -9,14 +9,16 @@ const save = document.getElementById('saveNote');
 const title = document.getElementById('title');
 const content = document.getElementById('content');
 const noteSaved = document.getElementById('noteSaved');
+const note = Array.from(document.getElementsByClassName('note'));
 
-// the two add note buttons is delegated an event listener
+// enable dialog pop-up to the two add note btns
 addNoteBtns.forEach(btn => {
     btn.addEventListener('click', () => {
         editor.showModal();
     });
 });
 
+// switches theme of the page
 themeSwitch.addEventListener('click', function () {
     if (this.textContent === '🌙') {
         this.textContent = '☀️';
@@ -54,17 +56,12 @@ editor.addEventListener('keydown', e => {
             savingNote();
             break;
         case "Escape": //cancel
-            t(e);
+            e.preventDefault();
+            form.reset();
+            editor.close();
             break;
     };
 });
-
-function t(e) {
-    e.preventDefault();
-    form.reset();
-    editor.close();
-    console.log('E')
-}
 
 const savingNote = () => {
     noteSaved.style.display = 'inline-block';
