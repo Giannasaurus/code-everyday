@@ -1,6 +1,5 @@
 # Notes App
 ## Gallery
-<img width="500" alt="image" src="https://github.com/user-attachments/assets/36e3a3e1-8cca-43b0-9ded-973e725d9335" />
 
 ## Problems & Solutions
 Problem: The .filler component did not disappear when a note was added. <br/>
