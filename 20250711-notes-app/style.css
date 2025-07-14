@@ -56,17 +56,11 @@ button:active {
     background-color: #3a43c7;
 }
 
-#themeSwitch img {
-    vertical-align: middle;
-    width: 25px;
-    height: 25px;
-}
-
 #notesContainer {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    min-height: calc(var(--body-height) - (32px + (20px * 2)));
+    /* min-height: calc(var(--body-height) - (32px + 40px)); */
 }
 
 #filler {
@@ -99,29 +93,36 @@ button:active {
     border-radius: 24px;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     justify-content: start;
     align-content: start;
+    row-gap: 5px;
     width: 250px;
     height: 250px;
     padding: 20px;
 }
 
-.note h2 {
-    white-space: nowrap;
+.note h2,
+.note .noteContent {
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
-.note p {
-    overflow: hidden;
-    text-overflow: ellipsis;
+.note h2 {
+    white-space: nowrap;
+}
+
+.note .noteContent {
     display: -webkit-box;
     line-clamp: 7;
     -webkit-box-orient: vertical;
     line-height: 1.5em;
     max-height: calc(1.5em * 7);
     word-wrap: break-word;
+}
+
+.noteDate {
+    color: #888;
+    font-size: 12px;
 }
 
 #noteEditor {
@@ -132,44 +133,60 @@ button:active {
     margin: auto;
 }
 
-#form input {
-    background-color: var(--color-light);
-    font-family: inherit;
-    border: none;
-    border-radius: 12px;
-    padding: 10px;
-}
-
-#form textarea {
-    background-color: var(--color-light);
-    font-family: inherit;
-    border: none;
-    border-radius: 12px;
-    resize: none;
-    height: 100px;
-    padding: 10px;
-}
-
-#form h2 {
+#noteForm h2 {
     margin-bottom: 10px;
 }
 
-#form input,
-#form textarea {
+.inputBoxes {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+fieldset {
+    border: none;
+}
+
+.inputBoxes input,
+.inputBoxes textarea {
+    background-color: var(--color-light);
+    font-family: inherit;
+    border: none;
+    border-radius: 12px;
     width: 100%;
+    padding: 10px;
+    margin: 5px 0;
 }
 
-#form input:focus,
-#form textarea:focus {
-    border: 2px solid var(--color-main);
-    outline: none;
+.inputBoxes textarea {
+    resize: none;
+    height: 100px;
 }
 
-#form div {
+.inputBoxes input:focus,
+.inputBoxes textarea:focus {
+    outline: 2px solid var(--color-main);
+    outline-offset: 2px;
+}
+
+#noteForm .cancelSave {
     display: flex;
     justify-content: end;
     gap: 10px;
     margin-top: 20px;
+}
+
+#cancelNote {
+    color: #888;
+    background-color: var(--color-light);
+}
+
+#cancelNote:hover {
+    background-color: #e5e5e8;
+}
+
+#cancelNote:active {
+    background-color: #d3d3d7;
 }
 
 #noteSaved {
@@ -186,4 +203,4 @@ button:active {
     left: 50%;
     transform: translateX(-50%);
     padding: 10px 15px;
-}s
+}
