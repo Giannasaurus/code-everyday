@@ -1,6 +1,7 @@
 # Start
 >[!NOTE]
 > Poorly-written code by a beginner 😔🙏
+> Gonna try my best to refactor them into better code little by little.
 
 Simple Dice Roller
 > June 7, 2025 / [Simple Dice Roller](20250607-simple-dice-roller/20250607-dice-roller) <br/>
