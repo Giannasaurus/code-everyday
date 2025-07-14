@@ -1,5 +1,5 @@
 # Start
-![!ALERT]
+![ALERT]
 > Poorly-written code by a beginner 😔🙏
 
 Simple Dice Roller
