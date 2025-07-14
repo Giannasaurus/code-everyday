@@ -1,4 +1,7 @@
 # Start
+![!ALERT]
+> Poorly-written code by a beginner 😔🙏
+
 Simple Dice Roller
 > June 7, 2025 / [Simple Dice Roller](20250607-simple-dice-roller/20250607-dice-roller) <br/>
 > June 8, 2025 / [Improvements on Dice Roller](20250607-simple-dice-roller/20250608-dice-roller-improved) <br/>
