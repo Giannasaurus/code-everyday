@@ -1,4 +1,3 @@
-// Tab functionality
 const tabLinks = document.querySelectorAll(".tab-link");
 const codeEditors = document.querySelectorAll(".code-editor");
 
@@ -6,11 +5,9 @@ tabLinks.forEach(tab => {
   tab.addEventListener("click", () => {
     const target = document.querySelector(tab.dataset.tabTarget);
 
-    // Remove active class from all tabs and editors
     codeEditors.forEach(editor => editor.classList.remove("active"));
     tabLinks.forEach(tab => tab.classList.remove("active"));
 
-    // Add active class to the clicked tab and its target
     tab.classList.add("active");
     target.classList.add("active");
 
@@ -18,7 +15,6 @@ tabLinks.forEach(tab => {
     });
   });
 
-// Code editor functionality
 const htmlEditor = document.getElementById("htmlEditor");
 const cssEditor = document.getElementById("cssEditor");
 const jsEditor = document.getElementById("jsEditor");
@@ -33,7 +29,6 @@ function updateOutput() {
   console.log("Output updated!");
 }
 
-// Listen for changes in all editors
 htmlEditor.addEventListener("input", updateOutput);
 cssEditor.addEventListener("input", updateOutput);
 jsEditor.addEventListener("input", updateOutput);
