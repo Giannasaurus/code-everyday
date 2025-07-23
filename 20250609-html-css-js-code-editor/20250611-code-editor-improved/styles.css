@@ -1,4 +1,21 @@
-@import url("global.css");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --tab-nav-height: 50px;
+  --global-border: 3px solid #000;
+}
+
+html,
+body {
+  font-family: "Helvetica", "Arial", sans-serif;
+  height: 100vh;
+  margin: 0;
+  overflow-y: hidden;
+}
 
 #codeEditorWrapper {
   height: calc(100vh - var(--tab-nav-height));
@@ -60,11 +77,23 @@
   border-bottom: none;
 }
 
+button,
+.tab-link {
+  background: none;
+  border: none;
+  appearance: none;
+}
+
 .code-editor {
   border: solid #000;
   border-width: 0 3px 3px 3px;
   outline: none;
   display: none;
+}
+
+:focus {
+  outline: 2px solid #808080;
+  outline-offset: 1px;
 }
 
 .active.code-editor {
