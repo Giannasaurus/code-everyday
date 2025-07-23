@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --color-light: #f2f3f8;
+    --color-dark: #1e1f26;
+    --color-main: #4a56ff;
+
+    --body-height: 100vh;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    height: 100%;
+    min-height: var(--body-height);
+}
+
+body {
+    background-color: var(--color-light);
+    font-family: 'Poppins', sans-serif;
+    padding: 0 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+
+header div {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    font-family: inherit;
+    color: var(--color-light);
+    background-color: var(--color-main);
+    border: none;
+    border-radius: 12px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #434ee9;
+}
+
+button:active {
+    background-color: #3a43c7;
+}
+
+#notesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    /* min-height: calc(var(--body-height) - (32px + 40px)); */
+}
+
+#filler {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 250px;
+    height: 250px;
+    margin: auto;
+}
+
+#filler h2 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+#filler p {
+    font-size: 14px;
+}
+
+#filler .add-note {
+    margin-top: 20px;
+}
+
+.note {
+    background-color: #fff;
+    border: none;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-content: start;
+    row-gap: 5px;
+    width: 250px;
+    height: 250px;
+    padding: 20px;
+}
+
+.note h2,
+.note .noteContent {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.note h2 {
+    white-space: nowrap;
+}
+
+.note .noteContent {
+    display: -webkit-box;
+    line-clamp: 7;
+    -webkit-box-orient: vertical;
+    line-height: 1.5em;
+    max-height: calc(1.5em * 7);
+    word-wrap: break-word;
+}
+
+.noteDate {
+    color: #888;
+    font-size: 12px;
+}
+
+#noteEditor {
+    border: none;
+    border-radius: 24px;
+    width: 350px;
+    padding: 20px;
+    margin: auto;
+}
+
+#noteForm h2 {
+    margin-bottom: 10px;
+}
+
+.inputBoxes {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+fieldset {
+    border: none;
+}
+
+.inputBoxes input,
+.inputBoxes textarea {
+    background-color: var(--color-light);
+    font-family: inherit;
+    border: none;
+    border-radius: 12px;
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+.inputBoxes textarea {
+    resize: none;
+    height: 100px;
+}
+
+.inputBoxes input:focus,
+.inputBoxes textarea:focus {
+    outline: 2px solid var(--color-main);
+    outline-offset: 2px;
+}
+
+#noteForm .cancelSave {
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+#cancelNote {
+    color: #888;
+    background-color: var(--color-light);
+}
+
+#cancelNote:hover {
+    background-color: #e5e5e8;
+}
+
+#cancelNote:active {
+    background-color: #d3d3d7;
+}
+
+#noteSaved {
+    color: var(--color-light);
+    font-size: 14px;
+    background-color: var(--color-main);
+    border-radius: 12px;
+    display: none;
+    position: absolute;
+    bottom: 20px;
+    opacity: 0;
+    transition: opacity 0.5;
+    z-index: 100;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 15px;
+}

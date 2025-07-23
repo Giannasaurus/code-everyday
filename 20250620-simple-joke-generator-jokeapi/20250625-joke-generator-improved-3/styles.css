@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+
+/* Reset and base styles */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    font: 700 20px 'Fredoka', sans-serif;
+    background-color: #fff;
+    height: 100vh;
+    overflow: auto;
+}
+
+/* Layout containers */
+main,
+footer {
+    background-color: #ccc;
+    border: none;
+    border-radius: 30px;
+    padding: 25px;
+    margin: 50px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+}
+
+h1 {
+    color: #000;
+}
+
+/* Buttons */
+button {
+    font: inherit;
+    font-size: 25px;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 15px 25px;
+    margin: 0 15px;
+}
+
+button:hover {
+    background-color: #eee;
+}
+
+button:active {
+    background-color: #ddd;
+}
+
+/* Joke display */
+pre {
+    background-color: #ffffff50;
+    border-radius: 15px;
+    padding: 10px 20px;
+    margin: 15px 0;
+}
+
+#jokeDisplay {
+    font-size: 15px;
+}
+
+#jokeDisplay,
+#jokeDisplay pre {
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+/* Form and fieldsets */
+form {
+    background-color: #ffffff50;
+    border-radius: 15px;
+    padding: 10px 20px;
+}
+
+fieldset {
+    border: none;
+    margin: 15px 0;
+}
+
+legend p {
+    color: #444;
+    font: 16px monospace, sans-serif;
+    display: inline-block;
+    margin-left: 5px;
+}
+
+/* Inputs and custom options */
+input {
+    margin-left: 10px;
+}
+
+.custom-options {
+    margin: 0 !important;
+    margin-left: 15px !important;
+}
+
+label[for="custom"].red-custom {
+    color: red;
+}
+
+#custom.show-asterisk::after {
+    font: 700 20px 'Fredoka', sans-serif;
+    color: red;
+    content: "*";
+    margin-left: 100px;
+}
+
+/* Footer */
+footer>p {
+    display: inline-block;
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 700px) {
+    main, footer {
+        margin: 25px;
+    }
+
+    header {
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    #jokeDisplay,
+    #jokeDisplay pre {
+        white-space: pre-wrap;
+        word-break: break-word;
+    }
+}

@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font: 400 16px 'Inter', sans-serif;
+    background-color: #121212;
+    width: 100vw;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.menu {
+    background-color: inherit;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: flex-end;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000000000000000000000000000000000000000000000000000000;
+    padding: 20px 30px;
+}
+
+button {
+    font-size: 16px;
+    background-color: #f8f9fe;
+    border: 2px solid #121212;
+    border-radius: 50px;
+    display: block;
+    padding: 15px;
+}
+
+button:focus {
+    outline: 2px solid blue;
+    outline-offset: 2px;
+}
+
+#genBtn {
+    margin-left: 10px;
+}
+
+#clearIcon, #backspaceIcon, #switchIcon {
+    width: 25px;
+    height: auto;
+}
+
+#cardWrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+    
+.card-style {
+    display: inline-block;
+    line-height: 20px;
+    color: #f8f9fe;
+    background-color: blue;
+    border-radius: 18px;
+    position: relative;
+    transition: transform 0.17s;
+    width: 225px;
+    height: 280px;
+    padding: 30px 25px;
+    margin: 8px;
+}
+
+.card-style:hover {
+    transform: scale(1.04);
+}
+
+.author-text-style {
+    text-align: right;
+    position: absolute;
+    right: 25px;
+    bottom: 30px;
+}
+
+/* light theme switch*/
+.body-light-theme {
+    background-color: #f8f9fe;
+}
+
+.button-light-theme {
+    border: 2px solid #121212;
+    background-color: #f8f9fe;
+}
+
+.button-light-theme:hover {
+    color: #f8f9fe;
+    background-color: blue;
+}

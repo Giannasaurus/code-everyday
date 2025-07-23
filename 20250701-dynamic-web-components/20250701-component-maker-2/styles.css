@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    font-family: 'Helvetica', sans-serif;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    border: 3px solid #000;
+    border-radius: 18px;
+    width: 350px;
+    height: 450px;
+    padding: 20px;
+    margin: auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+fieldset {
+    border: none;
+    margin: 10px 0;
+}
+
+#idCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 65%;
+    margin: auto 0;
+}
+
+img {
+    border-radius: 50px;
+    object-fit: cover;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 15px;
+}
