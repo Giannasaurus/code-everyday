@@ -1,11 +1,3 @@
-Array.prototype.scream = function () {
-    console.log("🔥🔥 AAAHHHH!!! I'm an array!!! 🔥🔥");
-}
-const weAreArray = [1, 2, 3];
-weAreArray.scream(); // 🔥🔥 AAAHHHH!!! I'm an array!!! 🔥🔥
-
-//----------------------------------------------------------
-
 const state = {
     untitled: 0
 };
@@ -22,35 +14,31 @@ const elements = {
     content: document.getElementById('content'),
     editor: document.getElementById('noteEditor')
 };
-console.log('variables assigned')
 
 let notes = [];
 
 /* Core functions */
 function openNoteDialog() {
-    console.log('triggered opened note dialog')
     elements.editor.showModal();
     elements.title.focus();
-    console.log('successfully ran')
 };
 
 function closeNoteDialog() {
-    console.log('triggered close note dialog')
     elements.form.reset();
     elements.editor.close();
-    console.log('successfully ran')
 };
 
 function toggleTheme() {
-    console.log('triggered theme toggle')
     const isDark = elements.themeSwitch.textContent === '🌙';
     elements.themeSwitch.textContent = isDark ? '☀️' : '🌙';
-    // TODO: implement real theme toggle
-    console.log('successfully ran')
+    document.body.classList.toggle('body-dark', isDark);
+    Array.from(document.getElementsByClassName('note')).forEach((note) => note.classList.toggle('note-dark', isDark));
+    elements.editor.classList.toggle('note-editor-dark', isDark);
+    elements.title.classList.toggle('field', isDark);
+    elements.content.classList.toggle('field', isDark);
 };
 
 function showSaveToast() {
-    console.log('triggered showsavetoast')
     const noteSaved = document.getElementById('noteSaved');
     noteSaved.style.display = 'inline-block';
     noteSaved.style.opacity = '1';
@@ -61,47 +49,33 @@ function showSaveToast() {
             noteSaved.style.display = 'none';
         }, 500);
     }, 2500);
-    console.log('successfully ran')
 };
 
 function createNewNote() {
-    console.log('triggered createnewnote')
     const titleVal = elements.title.value || `Untitled Note (${state.untitled++})`;
     const contentVal = content.value;
     const date = new Date().toLocaleString();
     const note = document.createElement('div');
 
     insertContent(note, titleVal, date, contentVal);
-    console.log('triggered insertcontent, new note created')
 
     isContainerEmpty();
-    console.log('triggered iscontainerempty')
 
     closeNoteDialog();
-    console.log('triggered closenotedialog')
 
-    console.log('triggered unshift')
     notes.unshift({
         id: note.id,
         title: titleVal,
         content: contentVal,
         date: date
     });
-    console.log('successfully ran')
 
-    console.log('triggered savenotes')
     saveNotes();
-    console.log('successfully ran')
 
-    console.log('triggered rendernotes')
     renderNotes(noteTitle, date, noteContent);
-    console.log('successfully ran')
-    
-    console.log('successfully ran')
 };
 
 function insertContent(note, titleVal, date, contentVal) {
-    console.log('triggered insertcontent')
     note.id = titleVal.replace(/\s/g, '-').toLowerCase();
     note.className = 'note';
 
@@ -119,48 +93,37 @@ function insertContent(note, titleVal, date, contentVal) {
     note.append(noteTitle, noteDate, noteContent);
     elements.container.appendChild(note);
 
-    console.log('successfully ran')
     return { note };
 };
 
 function isContainerEmpty() {
-    console.log('triggered iscontainerempty')
     if (elements.container.children.length === 0)
-        elements.filler.style.display = 'flex'; // show "no notes yet"
+        elements.filler.style.display = 'flex';
     else
-        elements.filler.style.display = 'none'; // hide it
-    console.log('successfully ran')
+        elements.filler.style.display = 'none';
 };
 
 function saveNotes() {
-    console.log('triggered savenotes')
     localStorage.setItem('quickNotes', JSON.stringify(notes));
-    console.log('successfully ran')
 };
 
 function renderNotes() {
-    console.log('triggered rendernotes')
     elements.container.innerHTML = '';
     notes.forEach(note => {
         const noteDiv = document.createElement('div');
         insertContent(noteDiv, note.title, note.date, note.content);
     });
-    console.log('successfully ran')
 };
 
 function loadNotes() {
-    console.log('triggered loadnotes')
     const savedNotes = localStorage.getItem('quickNotes');
-    console.log('successfully ran')
     return savedNotes ? JSON.parse(savedNotes) : [];
 };
 
 /* Event Listeners */
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('triggered dcl, loadnotes, rendernotes')
     notes = loadNotes();
     renderNotes();
-    console.log('successfully ran')
 });
 
 elements.addNoteBtns.forEach(btn => btn.addEventListener('click', openNoteDialog));
@@ -175,12 +138,12 @@ elements.save.addEventListener('click', e => {
 
 elements.editor.addEventListener('keydown', e => {
     switch (e.key) {
-        case "Enter": //save
+        case "Enter":
             e.preventDefault();
             createNewNote();
             showSaveToast();
             break;
-        case "Escape": //cancel
+        case "Escape":
             e.preventDefault();
             closeNoteDialog();
             break;
