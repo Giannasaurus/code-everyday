@@ -76,7 +76,7 @@ function generateQuote() {
     do {
         randomNum = Math.floor(Math.random() * quotes.length);
     } while (usedIndexes.includes(randomNum));
-    
+
     usedIndexes.push(randomNum);
     const { quote, author } = quotes[randomNum];
     craftCard(quote, author);
@@ -98,10 +98,11 @@ function craftCard(quote, author) {
     console.log("Card created: ", quote, author);
 }
 
-const clearIcon = document.querySelector("#clearIcon");
-clearIcon.addEventListener('click', () => {
-    cardWrapper.innerHTML = "";
-})
+class IconManager {
+    const clearIcon = document.querySelector("#clearIcon");
+    clearIcon.addEventListener('click', () => {
+        cardWrapper.innerHTML = "";
+    })
 
 const backspaceIcon = document.querySelector('#backspaceIcon');
 backspaceIcon.addEventListener('click', () => {
@@ -113,6 +114,7 @@ const switchIcon = document.querySelector("#switchIcon");
 switchIcon.addEventListener('click', () => {
     toggleTheme();
 })
+}
 
 let isLightTheme = false;
 function toggleTheme() {
