@@ -1,12 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
-    --color-light: #f2f3f8;
-    --color-main: #4a56ff;
-
-    --color-dark: #000425;
-    --color-dark-2: #13152a;
-
     --body-height: 100vh;
 }
 
@@ -23,7 +17,13 @@ body {
 }
 
 body {
-    background-color: var(--color-light);
+    --color-dark: #091344;
+    --color-dark-2: oklch(from var(--color-dark) calc(l * 1.2) c h);
+    --color-main: oklch(from var(--color-dark) calc(l * 3) calc(c * 5) h);
+    --color-light: oklch(from var(--color-dark) calc(l * 10) c h);
+
+    color: var(--text-color);
+    background-color: var(--color-dark);
     font-family: 'Poppins', sans-serif;
     padding: 0 20px;
 }
@@ -51,15 +51,45 @@ button {
 }
 
 button:hover {
-    background-color: #434ee9;
+    background-color: oklch(from var(--color-main) calc(l * -1.2) c h);
 }
 
 button:active {
-    background-color: #3a43c7;
+    background-color: oklch(from var(--color-main) calc(l * -5) c h);
+}
+
+.bg-picker {
+    color: var(--color-light);
+    background-color: var(--color-dark-2);
+    font-size: 14px;
+    border: none;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+input[type="color"] {
+    --webkit-appearance: none;
+    border: none;
+    border-radius: 6px;
+    width: 25px;
+    height: 25px;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+
+input[type="color"]::-webkit-color-swatch {
+    border: none;
 }
 
 #notesContainer {
     display: flex;
+    flex-direction: row-reverse;
+    justify-content: start;
     flex-wrap: wrap;
     gap: 20px;
     /* min-height: calc(var(--body-height) - (32px + 40px)); */
@@ -90,7 +120,7 @@ button:active {
 }
 
 .note {
-    background-color: #fff;
+    background-color: var(--color-dark-2);
     border: none;
     border-radius: 24px;
     display: flex;
@@ -128,6 +158,7 @@ button:active {
 }
 
 #noteEditor {
+    background-color: var(--color-dark);
     border: none;
     border-radius: 24px;
     width: 350px;
@@ -151,7 +182,7 @@ fieldset {
 
 .inputBoxes input,
 .inputBoxes textarea {
-    background-color: var(--color-light);
+    background-color: var(--color-dark-2);
     font-family: inherit;
     border: none;
     border-radius: 12px;
@@ -224,4 +255,10 @@ fieldset {
 .field {
     color: var(--color-light);
     background-color: var(--color-dark-2) !important;
+}
+
+@media only screen and (max-width: 1080px) {
+    #notesContainer {
+        flex-direction: row-reverse;
+    }
 }

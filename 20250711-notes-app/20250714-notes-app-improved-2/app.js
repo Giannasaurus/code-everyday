@@ -28,15 +28,24 @@ function closeNoteDialog() {
     elements.editor.close();
 };
 
-function toggleTheme() {
-    const isDark = elements.themeSwitch.textContent === '🌙';
-    elements.themeSwitch.textContent = isDark ? '☀️' : '🌙';
-    document.body.classList.toggle('body-dark', isDark);
-    Array.from(document.getElementsByClassName('note')).forEach((note) => note.classList.toggle('note-dark', isDark));
-    elements.editor.classList.toggle('note-editor-dark', isDark);
-    elements.title.classList.toggle('field', isDark);
-    elements.content.classList.toggle('field', isDark);
-};
+function setColor(input) {
+    const lightness = getLightnessFromHex(input.value);
+    document.body.setAttribute('style', 
+        `--color-dark: ${input.value}; --text-color: ${lightness > 60 ? 'black' : 'white'};`);
+}
+
+function getLightnessFromHex(hex) {
+    hex = hex.replace(/^#/, '');
+
+    const r = parseInt(hex.substr(0, 2), 16);
+    const g = parseInt(hex.substr(2, 2), 16);
+    const b = parseInt(hex.substr(4, 2), 16);
+
+    // Luminance formula
+    const brightness = (0.2126 * r + 0.7152 * g + 0.0722 * b) / 255;
+
+    return +(brightness * 100).toFixed(2);
+}
 
 function showSaveToast() {
     const noteSaved = document.getElementById('noteSaved');
@@ -63,7 +72,7 @@ function createNewNote() {
 
     closeNoteDialog();
 
-    notes.unshift({
+    notes.push({
         id: note.id,
         title: titleVal,
         content: contentVal,
@@ -98,9 +107,9 @@ function insertContent(note, titleVal, date, contentVal) {
 
 function isContainerEmpty() {
     if (elements.container.children.length === 0)
-        elements.filler.style.display = 'flex';
-    else
         elements.filler.style.display = 'none';
+    else
+        elements.filler.style.display = 'flex';
 };
 
 function saveNotes() {
@@ -128,7 +137,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 elements.addNoteBtns.forEach(btn => btn.addEventListener('click', openNoteDialog));
 elements.cancel.addEventListener('click', closeNoteDialog);
-elements.themeSwitch.addEventListener('click', toggleTheme);
 
 elements.save.addEventListener('click', e => {
     e.preventDefault();
