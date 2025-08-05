@@ -32,6 +32,8 @@ function setColor(input) {
     const lightness = getLightnessFromHex(input.value);
     document.body.setAttribute('style', 
         `--color-dark: ${input.value}; --text-color: ${lightness > 60 ? 'black' : 'white'};`);
+    elements.editor.setAttribute('style', 
+        `--color-dark: ${input.value}; --text-color: ${lightness > 60 ? 'black' : 'white'};`);
 }
 
 function getLightnessFromHex(hex) {
