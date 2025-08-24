@@ -37,4 +37,4 @@ Notes App
 
 Node.js & Express.js Routing
 > August 25, 2025 / [Node.js Routing](20250825-01-nodejs-routing) <br>
-> August 25, 2025 / [Express.js Routing](20250825-02-expressjs-routing) <br>
+> August 25, 2025 / [Express.js Routing](20250825-02-express-routing) <br>
