@@ -1,7 +1,5 @@
-const input = document.getElementById('input')
+const input = document.querySelector('input-field')
 
-document.getElementById('submit-btn').addEventListener('click', e => {
+document.querySelector('submit-btn').addEventListener('click', e => {
     e.preventDefault();
-    
-    
 })
