@@ -4,33 +4,34 @@ const jokeDisplay = document.getElementById('jokeDisplay');
 const baseURL = 'https://sv443.net/jokeapi/v2/joke/';
 
 jokeButton.addEventListener('click', async () => {
+    console.clear();
     try {
         // Get selected categories
         const checkedCategories = Array.from(document.querySelectorAll('input[name="category"]:not(#custom):checked'));
         const categories = checkedCategories.map(cb => cb.value).join(',') || 'Any';
-        console.log(categories);
+        console.log('Category/ies:', categories);
 
         const checkedValues = [];
         for (let cb of checkedCategories) {
             checkedValues.push(cb.value);
         }
-        console.log(checkedValues); // This will log the value of each checked checkbox
+        console.log('Array of checked categories:', checkedValues); // This will log the value of each checked checkbox
 
         // Get selected language
         const language = document.getElementById('langSelect').value;
-        console.log(language);
+        console.log('Language:', language);
 
         // Get selected blacklist flags
         const blacklisted = Array.from(document.querySelectorAll('input[name="blacklist"]:checked')).map(cb => cb.value).join(',');
-        console.log(blacklisted || "None selected");
+        console.log('Blacklisted flags:', blacklisted || "None selected");
 
         // Get response format
         const format = document.querySelector('input[name="format"]:checked').value;
-        console.log(format);
+        console.log('Response format:', format);
 
         // Get selected type
         const type = Array.from(document.querySelectorAll('input[name="type"]:checked')).map(cb => cb.value).join(',');
-        console.log(type || "None selected");
+        console.log('Joke type:', type || "None selected");
 
         // Construct URL with a category as default param
         let url = `${baseURL}${categories}?`;
@@ -52,7 +53,7 @@ jokeButton.addEventListener('click', async () => {
             data = await response.text();
             jokeDisplay.textContent = data;
         }
-        console.log(url, data);
+        console.log(`${url} \n\n ${data}`);
     }
     catch (error) {
         jokeDisplay.textContent = "Oops! Failed to get a joke.";
